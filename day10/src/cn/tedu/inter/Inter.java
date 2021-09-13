@@ -7,5 +7,5 @@ public interface Inter {
     /*2.接口里可以有普通方法吗?不可以*/
     public void theOne();
     /*3.接口里可以有抽象方法吗?可以,接口中的方法都是抽象方法*/
-    abstract public void theTwo();
+    public abstract void theTwo();
 }
