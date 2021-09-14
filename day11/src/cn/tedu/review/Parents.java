@@ -1,4 +1,4 @@
-package cn.ted.review;
+package cn.tedu.review;
 
 public class Parents implements Person{
     @Override

@@ -1,4 +1,4 @@
-package cn.ted.review;
+package cn.tedu.review;
 
 public class Teacher implements Person{
     @Override

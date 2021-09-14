@@ -1,4 +1,4 @@
-package cn.ted.review;
+package cn.tedu.review;
 /*本类用来测试学校开招待所案例*/
 public class TestPerson {
     public static void main(String[] args) {
