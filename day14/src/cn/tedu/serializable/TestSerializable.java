@@ -21,9 +21,8 @@ public class TestSerializable {
         try {
             in = new ObjectInputStream(new FileInputStream("E:\\" +
                     "ready\\1.txt"));
-            Student student = new Student();
             Object o = in.readObject();
-            student = (Student) o;
+            Student student = (Student) o;
             System.out.println(student.getAge());
             System.out.println(o.toString());
         } catch (Exception e) {
