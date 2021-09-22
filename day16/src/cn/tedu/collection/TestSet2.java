@@ -15,6 +15,6 @@ public class TestSet2 {
         set.add(s1);
         set.add(s2);
         set.add(s3);
-        
+
     }
 }
