@@ -20,8 +20,8 @@ class ss{
     }
 }
 interface s{
-    public static void s(){};
-    public static void method(){};
+    public static void s(){}
+    public static void method(){}
 }
 class tt implements s{
     public static void method() {
