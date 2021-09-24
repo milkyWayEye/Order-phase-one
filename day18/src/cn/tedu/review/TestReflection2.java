@@ -3,6 +3,8 @@ package cn.tedu.review;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /*本类用于练习暴力反射*/
 public class TestReflection2 {
@@ -38,6 +40,24 @@ public class TestReflection2 {
         //t.3通过刚刚获取到的age属性对象,给obj对象设置值
         f.set(obj,17);
         System.out.println(f.get(obj));
+    }
+
+    //创建单元测试方法,通过暴力反射获取与执行Person类的私有方法
+    @Test
+    public void getFunction2() throws NoSuchMethodException, IllegalAccessException, InstantiationException, InvocationTargetException {
+        Class<Person> clazz = Person.class;
+        //2.可以通过字节码对象获取某一个指定的私有方法对象
+        //如何确定要找哪个方法?方法名+参数列表
+        Method method = clazz.getDeclaredMethod("save", int.class, String.class);
+
+        /*在执行私有的方法之前,需要设置私有 可见的权限*/
+        method.setAccessible(true);
+        //3.在执行获取到的方法之前,需要先指定给哪个对象做这个save()操作
+        //3.1没有对象就创建对象
+        Object obj = clazz.newInstance();
+        //3.2通过刚刚获得的方法对象method给指定的对象obj做操作,注意传参
+        //底层会调用obj对象的save方法,传入参数666与"哈哈哈"
+        method.invoke(obj,666,"哈哈哈");
     }
 
 }
