@@ -3,10 +3,7 @@ package cn.tedu.reflection;
 
 import org.junit.Test;
 
-import javax.sound.midi.Soundbank;
 import java.lang.reflect.Method;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TestReflect {
